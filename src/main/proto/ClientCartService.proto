@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package jku.bac.grpc.server.grpcserver;
+
+message ClcaItem {
+  string id = 1;
+  string label = 2;
+  double prize = 3;
+  int32 amount = 4;
+}
+
+message Empty{
+
+}
+
+message Notification {
+  string name = 1;
+}
+
+service ClientCartService {
+  rpc ToCart (ClcaItem) returns (Empty);
+  rpc Checkout (Notification) returns (Empty);
+}

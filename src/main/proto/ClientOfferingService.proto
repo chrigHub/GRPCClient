@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package jku.bac.grpc.server.grpcserver;
+
+message ClientRequest {
+  int32 nrOfItems = 1;
+}
+
+message TransferItem {
+  string id = 1;
+  string label = 2;
+  double prize = 3;
+  int32 amount = 4;
+}
+
+message OfferingResponse{
+  repeated TransferItem transferItems = 1;
+}
+
+service ClientOfferingService {
+  rpc GetOffering (ClientRequest) returns (OfferingResponse);
+}
