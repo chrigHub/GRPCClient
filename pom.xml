@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>jku.bac.grpc</groupId>
-	<artifactId>Client</artifactId>
+	<artifactId>GRPCClient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Client</name>
-	<description>Demo project for Spring Boot</description>
+	<name>GRPCClient</name>
+	<description>Client for the microservice grpc architecture</description>
 
 	<properties>
 		<java.version>1.8</java.version>
